@@ -1,0 +1,30 @@
+<% if @game.turns.where("guess" => nil).length > 0 %>
+
+    <%= form_for @game.turns.where("guess" => nil).first, url: turn_path, :controller => "turns", method: 'put' do |f| %>
+      <%= f.hidden_field :mammal_type, :value => "rapper"%>
+      <%= f.submit "Rapper", :class => "choose" %>
+    <% end %>
+
+    <%= form_for @game.turns.where("guess" => nil).first, url: turn_path, :controller => "turns", method: 'put' do |f| %>
+      <%= f.hidden_field :mammal_type, :value => "bird"%>
+      <%= f.submit "Bird", :class => "choose" %>
+    <% end %>
+
+    <%= audio_tag("#{@game.turns.where("guess" => nil).first.sound.filename}.mp3", autoplay: true, controls: true, hidden: true) %>
+
+<% else %>
+
+  <span class="tweet_bubble"><%= @tweet %></span>
+  <%= render :partial => "twitter_insert", :locals => { :game => @game, :tweet => @tweet } %>
+
+  <%= form_for :game, url: games_path do |f| %>
+    <%= f.hidden_field :text, value: User.find(session[:current_user_id]).name, :autofocus=>true%>
+    <%= f.submit "Play Again", class: "btn" %>
+  <% end %>
+
+  <div class="social">
+  <%= render :partial => "twitter_follow" %>
+  <%= render :partial => "facebook_like" %>
+  </div>
+
+<% end %>

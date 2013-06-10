@@ -1,0 +1,243 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+html, body {
+  height: 100%;
+}
+
+@font-face {
+    font-family: "Graffonti";
+    src: url('/fonts/graffonti.ttf');
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url('/fonts/Futura.ttc');
+}
+
+@font-face {
+    font-family: "PlainBlackWide";
+    src: url('/fonts/PlainBlackWide.ttf');
+}
+
+@font-face {
+    font-family: "04b03";
+    src: url('/fonts/04B_03__.TTF');
+}
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+body {
+  background: url("/images/stressed_linen.png");
+  /*background-image: url('/images/bird-sketch1.png');*/
+  font-family: Futura;
+  overflow:hidden;
+}
+
+input {
+border: none;
+  background: #F9F2E7;
+}
+
+input[type="text"] {
+  width:260px;
+  height:80px;
+  font-size: 40px;
+  padding: 0 10px;
+}
+
+input[type="submit"].choose {
+  color:white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: inline;
+  font-family: Futura;
+  font-size: 50px;
+}
+
+input[type="submit"].choose:hover {
+  color:black;
+  display: block;
+  width: 100%;
+  display: inline;
+  font-family: Futura;
+  font-size: 50px;
+}
+
+input[type="submit"].hide {
+  position: absolute;
+  left: -9999px;
+}
+
+input:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #d3d3d3;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #d3d3d3;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #d3d3d3;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #d3d3d3;
+}
+
+.credentials {
+  margin: 20px auto;
+  width: 300px;
+  padding: 30px;
+  /*border: 1px dotted black;*/
+  background: #F9F2E7;
+  -webkit-box-shadow: 3px 3px 11px rgba(50, 50, 50, 0.43);
+  -moz-box-shadow:    3px 3px 11px rgba(50, 50, 50, 0.43);
+  box-shadow:         3px 3px 11px rgba(50, 50, 50, 0.43);
+}
+
+.credentials:nth-of-type(1) {
+  margin-top:100px;
+}
+
+.results {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 40px;
+    color:#d3d3d3;
+    margin-top:100px;
+}
+
+.results h1 {
+    font-size: 80px;
+}
+
+.nav {
+    position: fixed;
+    right:0;
+}
+
+.nav input {
+    margin: 20px 0;
+    right:0;
+    width:55px;
+}
+
+.both_buttons {
+    margin: 0 auto;
+    width: 800px;
+    margin-top:200px;
+}
+
+.play_button {
+    display:inline-block;
+    margin: 50px;
+}
+
+.play_button input[type=submit]{
+    background:none;
+    font-size:100px;
+}
+
+.rapper_pixel {
+    top: 60%;
+    left: 45%;
+    position: absolute;
+}
+
+.talk_bubble {
+    top: 56%;
+    left: 49%;
+    position: absolute;
+}
+
+.pixel_congrats {
+    top: 60%;
+    left: 45%;
+    position: absolute;
+}
+
+.bubble_congrats {
+    top: 56%;
+    left: 49%;
+    position: absolute;
+}
+
+.giant_pic {
+    margin-left: -400px;
+}
+
+.intro_text {
+    font-family: PlainBlackWide;
+    font-size:100px;
+    position:absolute;
+    left:550px;
+    top:100px;
+}
+
+.tweet {
+    top: 74%;
+    left: 47%;
+    position: absolute;
+}
+
+.login-form {
+    top: 30%;
+    left: 57%;
+    position: absolute;
+}
+
+input[type=submit].splash-submit {
+    position: absolute; left: -9999px;
+}
+
+.edit_turn {
+  float:left;
+  width: 50%;
+  height:100%;
+}
+
+.tweet_bubble {
+  font-family: PlainBlackWide;
+  font-size:1em;
+}
+
+.social {
+  position:absolute;
+  bottom:0;
+  clear: both;
+}
+
+.follow-like {
+width:150px;
+display:inline-block;
+}
+
+.edit_game {
+  position:absolute;
+  bottom:0;
+  padding: 10px;
+  width: 100%;
+}

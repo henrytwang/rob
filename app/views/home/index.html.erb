@@ -1,0 +1,10 @@
+<div class="login-form">
+<div class="form">
+<%= form_for :game, url: games_path do |f| %>
+  <%= f.text_field :text, placeholder: "Your name", :autofocus=>true%>
+  <%= f.submit "Start game", class: "btn splash-submit" %>
+<% end %>
+</div>
+</div>
+<%= image_tag("bird-sketch1.png", :class => 'giant_pic') %>
+<span class="intro_text">Rapper or Bird</span>
