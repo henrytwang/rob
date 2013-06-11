@@ -5,7 +5,6 @@ gem 'rails', '3.2.12'
 
 # This will change if we use a different database.
 # We'll just use sqlite for now
-gem 'sqlite3'
 
 gem 'jquery-rails'
 gem 'thin'
@@ -18,10 +17,16 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'sqlite3'
+  gem 'pg'
 end
 
 group :test do
   gem 'faker'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+end
+
+group :production do
+  gem 'pg'
 end
