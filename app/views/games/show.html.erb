@@ -14,15 +14,15 @@
 
 <% else %>
 
+  <%= image_tag("speech_bubble.png", :size => "400x358") %>
   <span class="tweet_bubble"><%= @tweet %></span>
   <%= render :partial => "twitter_insert", :locals => { :game => @game, :tweet => @tweet } %>
 
-  <%= form_for :game, url: games_path do |f| %>
+  <div class="social">
+  <%= form_for :game, url: games_path, :html => {class: "follow-like"} do |f| %>
     <%= f.hidden_field :text, value: User.find(session[:current_user_id]).name, :autofocus=>true%>
     <%= f.submit "Play Again", class: "btn" %>
   <% end %>
-
-  <div class="social">
   <%= render :partial => "twitter_follow" %>
   <%= render :partial => "facebook_like" %>
   </div>

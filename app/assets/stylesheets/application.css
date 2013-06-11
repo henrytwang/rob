@@ -204,7 +204,7 @@ input:focus {
 }
 
 .login-form {
-    top: 30%;
+    top: 230px;
     left: 57%;
     position: absolute;
 }
@@ -222,6 +222,12 @@ input[type=submit].splash-submit {
 .tweet_bubble {
   font-family: PlainBlackWide;
   font-size:1em;
+  position: absolute;
+  left:30px;
+  top:120px;
+  font-size:26px;
+  width:350px;
+  color: white;
 }
 
 .social {
@@ -240,4 +246,10 @@ display:inline-block;
   bottom:0;
   padding: 10px;
   width: 100%;
+}
+
+.tweet-button {
+position: absolute;
+left:288px;
+display:block;
 }

@@ -24,29 +24,23 @@ class GamesController < ApplicationController
     def show
       @twitter_accounts = [
       # Rappers
-      "@BIRDMAN5STAR",
-      "@SnoopDogg",
-      "@JoeBudden",
-      "@Therealbigboi",
-      "@Therealkiss",
-      "@50CENT",
-      "@LTLline",
-      "@KanyeWest",
-      "@IAMDIDDY",
-      "@RevRunWisdom",
-      "@NICKIMINAJ",
+      "@birdman5star",
+      "@snoopdogg",
+      "@therealbigboi",
+      "@50cent",
+      "@kanyewest",
+      "@iamdiddy",
+      "@revrunwisdom",
+      "@nickiminaj",
       "@gucci1017",
-      "@FINALLEVEL",
-      "@BOWWOW",
-      "@RayJ",
-      "@jimjonescapo",
+      "@bowwow",
       "@thejuelzsantana",
       "@thegame",
       "@myfabolouslife",
       # Bird organizations
-      "@WBSSTL",
+      "@wbsstl",
       # Bird... related
-      "@AngryBirds"]
+      "@angrybirds"]
       @game = Game.find(session[:current_game_id])
       @game.score = @game.turns.where("guess" => true).count
       @game.save
@@ -55,6 +49,6 @@ class GamesController < ApplicationController
         @top_score = game.score if game.score > @top_score
       end
       @top_users = Game.where(:score => @top_score).map {|game| game.user}
-      @tweet = "#{@game.turns.where("guess" => true).count} out of 10. Your move, #{@twitter_accounts.sample}"
+      @tweet = "I got #{@game.turns.where("guess" => true).count} out of 10. Your move, #{@twitter_accounts.sample}"
     end
 end
