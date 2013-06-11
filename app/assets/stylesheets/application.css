@@ -31,11 +31,6 @@ html, body {
     src: url('/fonts/PlainBlackWide.ttf');
 }
 
-@font-face {
-    font-family: "04b03";
-    src: url('/fonts/04B_03__.TTF');
-}
-
 .container {
   margin: 20px auto;
   width: 600px;
