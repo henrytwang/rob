@@ -1,3 +1,4 @@
-== R.O.B. (Rapper or Bird)
+== R.O.B. (www.rapperorbird.com)
 
 Weekend Sinatra project for DBC. Redone in Rails!
+
