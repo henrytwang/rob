@@ -1,4 +1,6 @@
 == R.O.B. (www.rapperorbird.com)
 
+![ScreenShot](http://www.henrywang.me/assets/ROB-595df766ae99022c8b6891c7e9804be9.png)
+
 Weekend Sinatra project for DBC. Redone in Rails!
 
