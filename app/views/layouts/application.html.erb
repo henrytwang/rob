@@ -15,8 +15,7 @@
 
   	<title><%= content_for?(:title) ? yield(:title) : "Rapper or Bird" %></title>
 
-  	<%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <script>
@@ -27,7 +26,6 @@
 
       ga('create', 'UA-41363121-1', 'rapperorbird.com');
       ga('send', 'pageview');
-
     </script>
   </head>
 
