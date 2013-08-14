@@ -1,10 +1,15 @@
-<div class="login-form">
-<div class="form">
-<%= form_for :game, url: games_path do |f| %>
-  <%= f.text_field :text, placeholder: "Your name", :autofocus=>true%>
-  <%= f.submit "Start game", class: "btn splash-submit" %>
-<% end %>
+<div class="bird-background">
+  <div class="login-form">
+    <div class="form">
+      <%= form_for :game, url: games_path do |f| %>
+        <%= f.text_field :text, placeholder: "Your Name", :autofocus=>true%>
+        <%= f.submit "Start game", class: "btn splash-submit" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 large-centered columns">
+      <span class="intro_text">Rapper or Bird</span>
+    </div>
+  </div>
 </div>
-</div>
-<%= image_tag("bird-sketch1.jpg", :class => 'giant_pic') %>
-<span class="intro_text">Rapper or Bird</span>
