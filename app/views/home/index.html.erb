@@ -7,6 +7,8 @@
       <%= form_for :game, url: games_path do |f| %>
         <%= f.text_field :text, placeholder: "Your Name", :autofocus=>true%>
         <%= f.submit "Start game", class: "btn splash-submit" %>
+        <br/>
+        <span>(Turn up the volume)</span>
       <% end %>
     </div>
   </div>
